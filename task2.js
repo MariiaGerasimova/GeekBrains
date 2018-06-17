@@ -1,4 +1,4 @@
-/* Task 2 */
+﻿/* Task 2 */
 
 console.log(calcNewYear(process.argv[2], process.argv[3], process.argv[4]));
 
@@ -19,14 +19,14 @@ function calcNewYear(d, m, y)
     if(!validate_date(d,m, y))
         return "Введена некорректная дата!";
 
-    y = checkYear(y) ? yearTmp : leapYearTmp;
+    y = checkYear(y) ? leapYearTmp : yearTmp;
 
     today = new Date(y,month.indexOf(m.toLowerCase()),d);
     nextDate = new Date(y+1,0,1);
     msPerDay = 24*60*60*1000;
     daysLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay);
 
-    return daysLeft -1;
+    return daysLeft;
 
     function validate_date(d,m,y)
     {
@@ -41,7 +41,7 @@ function calcNewYear(d, m, y)
          if( y < 1 ||   y > 2999)
              return false;
 
-          y = checkYear(y) ? yearTmp : leapYearTmp;
+          y = checkYear(y) ?  leapYearTmp : yearTmp;
 
 
         var date = new Date(y, monthNumber, d);

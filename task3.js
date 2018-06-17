@@ -24,10 +24,11 @@ function calcTime(t1, t2)
     if(hour != 0)
         resultStr = ""+hour+getResultStringHour(hour);
 
-    if(minutes != 0 || (minutes == 0 && hour != 0))
+    if(minutes != 0)
         resultStr = resultStr +" "+ minutes + getResultStringMinutes(minutes);
 
-    resultStr = resultStr + " " + seconds + getResutlStringSeconds(seconds);
+    if(seconds != 0)
+        resultStr = resultStr + " " + seconds + getResutlStringSeconds(seconds);
 
     return resultStr;
 

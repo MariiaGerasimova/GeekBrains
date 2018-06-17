@@ -6,8 +6,8 @@ function isPolindrom(inputStr)
 {
    var str = inputStr.toLowerCase();
 
-    str=str.replace(/\s/g, '','');
-    str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    str=str.replace(/\s/g, '');
+    str = str.replace(/[.,\/#!$%\^&\*\'|;@<>:{}=\-_`~()\[\]\"\"]/g,"");
 
     var reversStr ="";
 
